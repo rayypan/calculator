@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="keywords" content="calculator">
+        <meta name="description" content="A simple calculator">
+        <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no">
+        <title>Calculator</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!-- actions to perform before loading rest of the body -->
+        <script>
+            // this code colors the background of the website with a random value
+            let colors = [
+                "green",
+                "darkgreen",
+                "Tomato",
+                "Orange",
+                "DodgerBlue",
+                "MediumSeaGreen",
+                "#0276FD",
+                "SlateBlue",
+                "Violet",
+            ];
+            let colorNow = colors[Math.floor(Math.random() * colors.length)];
+            document.getElementsByTagName("body")[0].style.backgroundColor = colorNow;
+        </script>
+        <div class="root">
+            <!-- div id="headerRoot" -->
+                <header id="header" class="header">
+                    OOPS!
+                </header>
+                <header id="indicator" class="header2">
+                    <font color="red">JavaScript failed to run!</font>
+                </header>
+                <script>
+                    document.getElementById("header").innerHTML = "Calculator";
+                    document.getElementById("indicator").innerHTML = "";
+                    document.getElementById("indicator").style.display = "none"
+                </script>
+            <!-- /div -->
+            <table class="input">
+                <tr>
+                    <td>
+                        <center>
+                            <input class="input_text" id="input_text" type="text" placeholder="0">
+                        </center>
+                    </td>
+                </tr>
+            </table>
+            <table class="buttons">
+                <tr>
+                    <td><button class="btn" id="btn_0" onclick="btn_press('0');">0</button></td>
+                    <td><button class="btn" id="btn_ce" onclick="btn_press('ce');">CE</button></td>
+                    <td><button class="btn" id="btn_del" onclick="btn_press('del');">DEL</button></td>
+                </tr>
+                <tr>
+                    <td><button class="btn" id="btn_1" onclick="btn_press('1');">1</button></td>
+                    <td><button class="btn" id="btn_2" onclick="btn_press('2');">2</button></td>
+                    <td><button class="btn" id="btn_3" onclick="btn_press('3');">3</button></td>
+                </tr>
+                <tr>
+                    <td><button class="btn" id="btn_4" onclick="btn_press('4');">4</button></td>
+                    <td><button class="btn" id="btn_5" onclick="btn_press('5');">5</button></td>
+                    <td><button class="btn" id="btn_6" onclick="btn_press('6');">6</button></td>
+                </tr>
+                <tr>
+                    <td><button class="btn" id="btn_7" onclick="btn_press('7');">7</button></td>
+                    <td><button class="btn" id="btn_8" onclick="btn_press('8');">8</button></td>
+                    <td><button class="btn" id="btn_9" onclick="btn_press('9');">9</button></td>
+                </tr>
+                <tr>
+                    <td><button class="btnCalc" id="btn_add" onclick="btn_press('+');">+</button></td>
+                    <td><button class="btnCalc" id="btn_sub" onclick="btn_press('-');">-</button></td>
+                    <td><button class="btn" id="btn_dot" onclick="btn_press('.');">.</button></td>
+                </tr>
+                <tr>
+                    <td><button class="btnCalc" id="btn_mul" onclick="btn_press('*');">*</button></td>
+                    <td><button class="btnCalc" id="btn_div" onclick="btn_press('/');">/</button></td>
+                    <td><button class="btnEql" id="btn_eql" onclick="btn_press('=');">=</button></td>
+                </tr>
+            </table>
+        </div>
+        <footer>
+            <div id="footer" class="footer">
+                Loading javascript...
+            </div>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>

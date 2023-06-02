@@ -1,0 +1,154 @@
+html {
+    font-family: monospace;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+body {
+    margin: 0;
+    overflow: auto;
+    background-color: #0276FD;
+}
+/* width of scrollbar */
+::-webkit-scrollbar {
+    width: 0;
+}
+.root {
+    width: 340px;
+    height: 460px;
+    margin: auto;
+    position: absolute;
+    inset: 0;
+    top: 15px;
+    border: 1px solid #aaa;
+    border-radius: 28px;
+    background-color: white;
+    overflow: auto;
+}
+.header {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    top: 10%;
+    color: #aaa;
+    font-size: 1.5rem;
+}
+.header2 {
+    width: 80%;
+    height: 0;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    top: 12%;
+    color: #555;
+    font-size: 1rem;
+}
+.input {
+    width: 87%;
+    margin: auto;
+    position: relative;
+    top: 15%;
+    left: -3px;
+}
+.input_text {
+    width: calc(100% - 40px);
+    height: 42px;
+    padding: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #ddd;
+    border: 1px solid #555;
+    border-radius: 20px;
+    outline: none;
+    text-align: right;
+    font-size: 1.3rem;
+}
+.buttons {
+    width: calc(100% - 43px);
+    margin: auto;
+    position: relative;
+    top: 18%;
+}
+td {
+    width: 30%;
+}
+button {
+    width: 95%;
+    height: 42px;
+    border: 1px solid #555;
+    border-radius: 28px;
+    background-color: #ddd;
+    margin: auto;
+    cursor: pointer;
+    font-size: 1.3rem;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition-duration: 100ms;
+}
+button:active {
+    background-color: #fff;
+    font-size: 1.25rem;
+    transition-duration: 100ms;
+}
+#btn_add, #btn_sub, #btn_mul, #btn_div {
+    background-color: #555;
+    color: #eee;
+}
+#btn_add:active,
+#btn_sub:active,
+#btn_mul:active,
+#btn_div:active {
+    background-color: #555;
+    font-size: 1.1rem;
+}
+#btn_eql {
+    background-color: #555;
+    color: white;
+}
+#btn_eql:active {
+    background-color: #555;
+    font-size: 1.1rem;
+}
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 2.8px;
+    z-index: -2;
+}
+.footer {
+    text-align: center;
+    color: #dedede;
+    font-size: 6px;
+}
+/* zoom the display if device doesn't use the default
+ * 360px display width size
+ */
+@media only screen and (min-width: 400px) {
+    body {
+        zoom: 1.1;
+    }
+}
+@media only screen and (max-height: 480px) {
+    .root {
+        top: 10px;
+        height: 80%;
+        overflow: auto;
+        padding-bottom: 20px;
+    }
+    .input_text {
+        width: 85%;
+    }
+    .buttons {
+        width: 85%;
+        margin: auto;
+        position: relative;
+        top: 18%;
+    }
+}
